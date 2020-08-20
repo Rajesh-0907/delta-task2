@@ -73,7 +73,7 @@ else if (n) {
  var c = b.replace(/x/g, '');
  var d = c.replace(/y/g, '');
   console.log(d);
-  var e = parseInt(d);
+ var e = Math.sqrt(parseInt(d));
   ctx.save();
   ctx.beginPath();
  ctx.arc(0, 0, e, 0, (Math.PI / 180) * 360, false);
