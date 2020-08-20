@@ -1,0 +1,47 @@
+*{
+  user-select: none;
+}
+
+
+body{
+  background-color: grey;
+}
+canvas{
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
+
+#equ{
+  position:absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -5%);
+  padding: 10px;
+  width: 640px;
+  display: flex;
+
+}
+
+input{
+  width: 600px;
+  outline: none;
+}
+
+@media only screen and (max-width: 662px) {
+
+  input{
+    width: 400px;
+  }
+
+  #equ{
+
+    width: 440px;
+
+  }
+
+
+  }
