@@ -1,3 +1,4 @@
+
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext("2d");
 var i = 0;
@@ -35,12 +36,9 @@ ctx.fillText("O", 305, 315);
 
   ctx.translate(300, 300)
   text = equ.value;
+  var n =text.includes("x*x + y*y")
   res = text.toUpperCase();
-  res1 = text.split(" ");
-  for(j = 0; j < text.length; j++)
-{
- console.log(res1[j]);
-}
+
  console.log(res);
 
 if(res === ""){
@@ -68,6 +66,22 @@ else if(res === "X"){
   ctx.stroke();
   ctx.restore();
   ctx.translate(-300, -300)
+}
+else if (n) {
+ var a = text.replace(/\s*[-+\/*]\s*/g, '');
+ var b = a.replace(/=/, '');
+ var c = b.replace(/x/g, '');
+ var d = c.replace(/y/g, '');
+  console.log(d);
+  var e = parseInt(d);
+  ctx.save();
+  ctx.beginPath();
+ ctx.arc(0, 0, e, 0, (Math.PI / 180) * 360, false);
+ ctx.lineWidth = 2;
+ ctx.strokeStyle = "red";
+ ctx.stroke();
+ ctx.restore();
+ ctx.translate(-300, -300)
 }
 else if (res === "-X") {
   ctx.save();
@@ -177,3 +191,4 @@ else if (res === "-X") {
  }
 
 }
+
