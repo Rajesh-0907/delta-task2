@@ -8,14 +8,18 @@
     <title></title>
   </head>
   <body>
-  
+
+
    <div id="equ">
 
-     <input id="equa"type="text" name="equation" value="" autocomplete = "off" required >
-     <button onclick="myFunction()">go</button>
+     <input id="equa"type="text" name="equation" value="" autocomplete = "off" required ><br>
+     <button onclick="single()"type="button" name="button"> single graph</button>
+     <button onclick="multiple()"type="button" name="button"> multiple graph</button>
+
    </div>
 
-    <canvas id="canvas" width="600" height="600"></canvas>
+    <canvas onscroll="zoom()" onmousemove="showCoords(event)" onmouseout="clearCoor()" id="canvas" width="600" height="600"></canvas>
   </body>
   <script src="task2.js" charset="utf-8"></script>
 </html>
+
